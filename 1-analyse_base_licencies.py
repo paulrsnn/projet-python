@@ -36,7 +36,7 @@ sorted(a, key = 'l_2019')
 
 
 # Pour simplifier l'analyse et la représentation graphique, faudrait transposer colonnes en ligne (ajouter une colonne sexe, tranche d'age...) 
-# pour réduire le nb de colonnes et faire stats par groupe. => utiliser fonction .pivot
+# pour réduire le nb de colonnes et faire stats par groupe. => utiliser fonction .pivot ou melt
 
 # Statistiques par régions :
  #Pourcentage de licencies dans chaque sport par région
