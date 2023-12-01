@@ -32,7 +32,7 @@ lic_comm[lic_comm['code_commune'] == 75101]
 
 lic_comm.columns
 
-sorted(a, key = 'l_2019')
+#sorted(a, key = 'l_2019')
 
 
 # Pour simplifier l'analyse et la représentation graphique, faudrait transposer colonnes en ligne (ajouter une colonne sexe, tranche d'age...) 
@@ -63,13 +63,13 @@ test = lic_comm[['nom_fed', 'l_h_2019']].groupby(['nom_fed']).sum().sort_values(
 test.head()
 
 sns.barplot(x = 'nom_fed', y = 'l_h_2019', data = test)
-plt.show()
+#plt.show()
 
 
 # Creation d'un df contenant les 10 sports les plus pratiques par les femmes en 2019
 femmes = lic_comm[['nom_fed', 'l_f_2019']].groupby(['nom_fed']).sum().sort_values(by = 'l_f_2019', ascending = False).head(10).reset_index()
 sns.barplot(x = 'nom_fed', y = 'l_f_2019', data = femmes)
-plt.show()
+#plt.show()
 
 
 #Selectionner les colonnes de 2019 
@@ -92,7 +92,7 @@ top = fh[['nom_fed', 'region', 'sexe', 'nb_licencies']].groupby(['nom_fed', 'sex
 top.head(20)
 
 sns.barplot(x = 'nom_fed', y = 'nb_licencies', hue = 'sexe', data = top)
-plt.show()
+#plt.show()
 
 # Transposer la base 
 
@@ -131,7 +131,7 @@ for r in reg['region'] :
 
 
 test.head()
-a.columns
+#a.columns
 
 
 reg.groupby(['region', 'sexe']).max('nb_licencies')
@@ -152,4 +152,4 @@ communes = fiona.open("https://www.data.gouv.fr/fr/datasets/r/a01aff2a-8f36-4a77
 
 communes.head()
 
-import shapefile
+#import shapefile
