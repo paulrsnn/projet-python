@@ -12,6 +12,9 @@ lic_comm.head(5)
 
 lic_comm.columns
 
+lic_comm.dtypes
+lic_comm['fed_2019'].astype(str)
+lic_comm.dtypes
 
 lic_comm['code_commune'].nunique() #34893 communes
 lic_comm['region'].nunique() #18 regions
@@ -19,11 +22,13 @@ lic_comm['fed_2019'].nunique() #99 identifiants de federation
 lic_comm['nom_fed'].unique()
 lic_comm['nom_fed'].nunique() #99
 
+lic_comm['l_f_2019'].dtypes
 lic_comm.isnull().sum()
-
-lic_comm[['code_commune', 'l_2019']].groupby('code_commune').sum() #La base lic_comm regroupée par commune : cela donne le nb de licenciés 
+lic_comm['l_h_2019'].astype(int)
+lic_comm[['code_commune', 'l_2019']].groupby('code_commune').sum() 
+#La base lic_comm regroupée par commune : cela donne le nb de licenciés 
 # par commune pour chaque sport
-
+lic_comm.dtypes
 lic_comm[['region', 'l_2019']].groupby('region').sum().sort_values(by = 'l_2019', ascending = False)
 
 lic_comm[['libelle', 'l_2019']].groupby('libelle').sum().sort_values(by = 'l_2019', ascending = False) #On groupe la base par les libelles : cela donne
@@ -90,6 +95,8 @@ fh.head()
 
 top = fh[['nom_fed', 'region', 'sexe', 'nb_licencies']].groupby(['nom_fed', 'sexe']).sum('nb_licencies').sort_values(by = 'nb_licencies', ascending = False).head(20).reset_index()
 top.head(20)
+
+
 
 sns.barplot(x = 'nom_fed', y = 'nb_licencies', hue = 'sexe', data = top)
 plt.show()
