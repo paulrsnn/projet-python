@@ -1,0 +1,18 @@
+regions_data =
+{
+    "data":
+     [ 
+    {
+        "Region": "Region A",
+         "Tasks": [20, 30, 50]
+    },
+    {
+        "Region": "Region B",
+         "Tasks": [10, 25, 65]
+    },
+    {
+        "Region": "Region C",
+         "Tasks": [15, 40, 45]
+    }
+]
+}
