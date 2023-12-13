@@ -5,7 +5,7 @@ import pyproj
 import fiona
 import geopandas
 
-lic_comm = pd.read_csv("https://www.data.gouv.fr/fr/datasets/r/1825fde3-a668-47e3-a46d-b62b5af6560a", encoding = 'Latin-1', sep = ';')
+lic_comm = pd.read_csv("https://www.data.gouv.fr/fr/datasets/r/1eb1e7c9-27c4-4834-b8b6-cf63b45ee74b", encoding = 'UTF-8', sep = ';')
 
 lic_comm.head(5)
 
